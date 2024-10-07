@@ -27,6 +27,28 @@ class HomepageFragment : Fragment() {
         val adapter = VacancyAdapter(repository.getVacancies())
         recycleViewVacancies.adapter = adapter
 
+
+//        val recycleViewVacancies: RecyclerView = view.findViewById(R.id.recyclerViewVacancies)
+//        val repository = VacancyRepository()
+//
+//        val receiver = object : BroadcastReceiver() {
+//            override fun onReceive(context: Context, intent: Intent) {
+//                if (intent.action == "MyServiceAction") {
+//                    val value = intent.getStringExtra("key")
+//                    recycleViewVacancies.setAdapter(VacancyAdapter(repository.getVacancies()))
+//                }
+//            }
+//        }
+//
+//        val filter = IntentFilter("MyServiceAction")
+//        activity?.registerReceiver(receiver, filter, Context.RECEIVER_NOT_EXPORTED)
+//
+//        val intent = Intent(activity, VacancyRepository::class.java)
+//        activity?.startService(intent)
+
+//        val adapter = VacancyAdapter(repository.getVacancies())
+//        recycleViewVacancies.adapter = adapter
+
         return view
     }
 
