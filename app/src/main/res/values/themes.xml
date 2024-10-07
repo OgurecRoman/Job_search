@@ -16,4 +16,8 @@
         <item name="colorAccent">@color/green</item>
         <item name="android:radius">10dp</item>
     </style>
+
+    <style name="ActiveText">
+        <item name="colorAccent">@color/blue</item>
+    </style>
 </resources>

@@ -12,7 +12,6 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph">
 
@@ -24,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/my_nav_graph"
         android:background="@color/black"
-        app:itemTextColor="@color/grey2"
+        app:itemTextColor="@color/grey3"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav">
 
