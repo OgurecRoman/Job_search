@@ -11,22 +11,24 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/lookCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
             android:layout_weight="1"
             android:text="Сейчас просматривает 1 человек"
             android:textColor="@color/green"
-            android:textSize="20dp">
+            android:textSize="15dp">
 
         </TextView>
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
+            android:id="@+id/heart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:src="@drawable/heart">
 
@@ -38,10 +40,10 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:text="Aboba"
         android:textColor="@color/white"
-        android:textSize="40dp">
+        android:textSize="23dp">
 
     </TextView>
 
@@ -49,10 +51,10 @@
         android:id="@+id/town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:text="Aboba"
         android:textColor="@color/white"
-        android:textSize="30dp">
+        android:textSize="17dp">
 
     </TextView>
 
@@ -64,16 +66,16 @@
             android:id="@+id/company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:text="Aboba"
             android:textColor="@color/white"
-            android:textSize="30dp">
+            android:textSize="17dp">
 
         </TextView>
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:src="@drawable/check">
@@ -89,10 +91,10 @@
         android:layout_marginBottom="5dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:src="@drawable/experience">
 
         </ImageView>
@@ -104,7 +106,7 @@
             android:layout_marginLeft="10dp"
             android:text="Aboba"
             android:textColor="@color/white"
-            android:textSize="30dp">
+            android:textSize="17dp">
 
         </TextView>
 
@@ -114,20 +116,25 @@
         android:id="@+id/data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:text="Aboba"
         android:textColor="@color/grey3"
-        android:textSize="25dp">
+        android:textSize="15dp">
 
     </TextView>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/but_responce_style"
         android:text="Откликнуться"
-        android:textSize="25dp">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="17dp">
 
     </Button>
 

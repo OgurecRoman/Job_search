@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.job_search.R
+import com.example.job_search.domain.model.VacancyModel
 import com.example.job_search.domain.repository.VacancyRepository
 import com.example.job_search.presentation.adapters.VacancyAdapter
 
@@ -23,31 +25,25 @@ class HomepageFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_homepage, container, false)
 
         val recycleViewVacancies: RecyclerView = view.findViewById(R.id.recyclerViewVacancies)
+        val butMore: Button = view.findViewById(R.id.butMore)
+
         val repository = VacancyRepository()
-        val adapter = VacancyAdapter(repository.getVacancies())
+
+        val vacancies = if (repository.getList().isEmpty()) {
+            repository.getVacancies()
+        } else {
+            repository.getList()
+        }
+
+        butMore.setText("Еще " + (vacancies.size - 3) + " вакансий")
+        var adapter = VacancyAdapter(vacancies.take(3) as ArrayList<VacancyModel>)
         recycleViewVacancies.adapter = adapter
 
-
-//        val recycleViewVacancies: RecyclerView = view.findViewById(R.id.recyclerViewVacancies)
-//        val repository = VacancyRepository()
-//
-//        val receiver = object : BroadcastReceiver() {
-//            override fun onReceive(context: Context, intent: Intent) {
-//                if (intent.action == "MyServiceAction") {
-//                    val value = intent.getStringExtra("key")
-//                    recycleViewVacancies.setAdapter(VacancyAdapter(repository.getVacancies()))
-//                }
-//            }
-//        }
-//
-//        val filter = IntentFilter("MyServiceAction")
-//        activity?.registerReceiver(receiver, filter, Context.RECEIVER_NOT_EXPORTED)
-//
-//        val intent = Intent(activity, VacancyRepository::class.java)
-//        activity?.startService(intent)
-
-//        val adapter = VacancyAdapter(repository.getVacancies())
-//        recycleViewVacancies.adapter = adapter
+        butMore.setOnClickListener {
+            adapter = VacancyAdapter(vacancies)
+            recycleViewVacancies.adapter = adapter
+            butMore.setVisibility(View.GONE)
+        }
 
         return view
     }

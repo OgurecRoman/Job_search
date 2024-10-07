@@ -44,6 +44,10 @@ class VacancyRepository {
         return listVacancies
     }
 
+    fun getList() : ArrayList<VacancyModel>{
+        return listVacancies
+    }
+
     fun setLike(id: Int) {
         val vacancy = listVacancies[id]
         vacancy.isFavorite = !vacancy.isFavorite

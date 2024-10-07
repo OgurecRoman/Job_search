@@ -13,9 +13,19 @@ class VacancyAdapter(private val data: ArrayList<VacancyModel>) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView
+        val town: TextView
+        val company: TextView
+        val experience: TextView
+        val date: TextView
+        val lookCount: TextView
 
         init {
             title = view.findViewById(R.id.title)
+            town = view.findViewById(R.id.town)
+            company = view.findViewById(R.id.company)
+            experience = view.findViewById(R.id.experience)
+            date = view.findViewById(R.id.data)
+            lookCount = view.findViewById(R.id.lookCount)
         }
     }
 
@@ -29,6 +39,10 @@ class VacancyAdapter(private val data: ArrayList<VacancyModel>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         // Установка данных
         viewHolder.title.text = data[position].title
+        viewHolder.town.text = data[position].town
+        viewHolder.company.text = data[position].company
+        viewHolder.experience.text = data[position].experience
+        viewHolder.date.text = data[position].publishedDate
     }
 
     override fun getItemCount() = data.size
